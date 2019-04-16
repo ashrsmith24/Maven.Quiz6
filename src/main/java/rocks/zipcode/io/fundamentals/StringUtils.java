@@ -13,6 +13,7 @@ public class StringUtils {
      */
     public static Collection<String> getAllCasings(String string) {
         // get length of string
+        //String lowercase = string.toLowerCase();
         // get range of length
         // get power-set of range
 
@@ -37,7 +38,7 @@ public class StringUtils {
      * @return near-identical string with `valueToBeInserted` inserted at `index`
      */
     public static String insertAtIndex(String stringToBeManipulated, String valueToBeInserted, Integer index) {
-        return null;
+        return stringToBeManipulated.substring(0,index) + valueToBeInserted + stringToBeManipulated.substring(index);
     }
 
     /**
@@ -47,6 +48,6 @@ public class StringUtils {
      * @return near-identical string with character at `index` replaced with `replacementValue`
      */
     public static String replaceAtIndex(String stringToBeManipulated, Character replacementValue, Integer index) {
-        return null;
+    return  stringToBeManipulated.substring(0,index) + replacementValue + stringToBeManipulated.substring(index +1);
     }
 }
